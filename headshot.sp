@@ -35,11 +35,11 @@ char g_KillShot[256];
 char g_sB[512];
 
 public Plugin:myinfo= {
-	name = "Sades160",
-	author = "Sades160",
-	description = "Headshot Sound",
+	name = "Dingshot",
+	author = "Victor BUCKWANGS Gonzalez",
+	description = "DING Headshot!",
 	version = PLUGIN_VERSION,
-	url = "https://github.com/Sades160/headshot-sound"
+	url = "https://gitlab.com/vbgunz/Dingshot"
 }
 
 public OnPluginStart() {
@@ -47,9 +47,9 @@ public OnPluginStart() {
 	HookEvent("infected_hurt", HeadShotHook, EventHookMode_Pre);
 	HookEvent("infected_death", HeadShotHook, EventHookMode_Pre);
 
-	g_cvHeadShot = CreateConVar("ds_headshot", "ui/littlereward.wav", "Sound bite for head shot");
+	g_cvHeadShot = CreateConVar("ds_headshot", "ui/survival_teamrec.wav", "Sound bite for head shot");
 	HookConVarChange(g_cvHeadShot, UpdateConVarsHook);
-	UpdateConVarsHook(g_cvHeadShot, "ui/littlereward.wav", "ui/littlereward.wav");
+	UpdateConVarsHook(g_cvHeadShot, "ui/survival_teamrec.wav", "ui/survival_teamrec.wav");
 
 	g_cvKillShot = CreateConVar("ds_killshot", "ui/survival_teamrec", "Sound bite for kill shot to the head");
 	HookConVarChange(g_cvKillShot, UpdateConVarsHook);
