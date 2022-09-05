@@ -39,7 +39,7 @@ public Plugin:myinfo= {
 	author = "Sades160",
 	description = "Headshot Sound",
 	version = PLUGIN_VERSION,
-	url = "https://gitlab.com/vbgunz/Dingshot"
+	url = "https://github.com/Sades160/headshot-sound"
 }
 
 public OnPluginStart() {
